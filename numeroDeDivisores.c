@@ -71,8 +71,14 @@ int main() {
 
     
     printf("Digite a quantidade de testes: ");
+    
     scanf("%d", &quantidadeDeTestes);
 
+    if(quantidadeDeTestes > 1000){
+        printf("O limite de testes é 1000.\n");
+        return 0;
+    }
+    
     int vetorTestes[quantidadeDeTestes * 2];
 
     printf("Digite o intervalo dos testes separados por espaço: \n");
@@ -88,7 +94,7 @@ int main() {
         printf("Resultado do teste %d com intervalo %d %d: ", i/2 + 1, vetorTestes[i], vetorTestes[i + 1]);
         printf("%d \n", calculaQuantidadeDaSequencia(vetorTestes[i], vetorTestes[i + 1], sequencia));
     }
-    
+
     return 0;
 }
     
