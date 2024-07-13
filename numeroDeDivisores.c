@@ -70,31 +70,25 @@ int main() {
     sequencia[MAX_TAMANHO] = sequencia[MAX_TAMANHO - 1] + calculaNumeroDeDivisores(sequencia[MAX_TAMANHO - 1]);
 
     
-    printf("Digite a quantidade de testes: ");
-    
     scanf("%d", &quantidadeDeTestes);
 
     if(quantidadeDeTestes > 1000){
         printf("O limite de testes é 1000.\n");
         return 0;
     }
-    
-    int vetorTestes[quantidadeDeTestes * 2];
 
-    printf("Digite o intervalo dos testes separados por espaço: \n");
+    int vetorTestes[quantidadeDeTestes * 2];
 
     int auxContador = 0;
     for(int i = 0; i < quantidadeDeTestes; i++){
-        printf("Caso %d: ", i + 1);
         scanf("%d %d", &vetorTestes[auxContador], &vetorTestes[auxContador + 1]);
         auxContador += 2;
     }
 
     for(int i = 0; i < quantidadeDeTestes * 2; i+= 2){
-        printf("Resultado do teste %d com intervalo %d %d: ", i/2 + 1, vetorTestes[i], vetorTestes[i + 1]);
+        printf("caso %d: ", i/2 + 1);
         printf("%d \n", calculaQuantidadeDaSequencia(vetorTestes[i], vetorTestes[i + 1], sequencia));
     }
 
     return 0;
 }
-    
