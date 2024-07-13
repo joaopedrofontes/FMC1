@@ -1,6 +1,4 @@
 
-
-
 #include <stdio.h>
 #include <math.h>
 
@@ -24,9 +22,9 @@ int main() {
     int resultado;
     scanf("%d %d", &n, &m);
 
-    double phi = (1 + sqrt(5)) / 2;
-    double psi = (1 - sqrt(5)) / 2;
-    nTermo = (potencia(phi, n) - potencia(psi, n)) / sqrt(5);
+    double x = (1 + sqrt(5)) / 2;
+    double y = (1 - sqrt(5)) / 2;
+    nTermo = (potencia(x, n) - potencia(y, n)) / sqrt(5);
     resultado = (int)nTermo % (int)potencia(2, m);
     //printf("%.0lf\n", nTermo);
     printf("%d\n", resultado);
